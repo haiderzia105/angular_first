@@ -1,5 +1,38 @@
-<!-- <h1>Angular 12 {{title}}</h1>
-<h1>{{data}}</h1>
+<h1>Angular 12 {{title}}</h1>
+<h1 *ngIf="able; then ifBlock else elseBlock" ></h1>
+<ng-template #ifBlock>
+    <h1>Condition No.1</h1>
+</ng-template>
+<ng-template #elseBlock>
+    <h1>Condition No.2</h1>
+</ng-template>
+
+<ng-template [ngIf]="kite==='red'">
+    <h1 style="color: red;">The color is red.</h1>
+</ng-template>
+<ng-template [ngIf]="kite==='green'">
+    <h1 style="color: green;">The color is green.</h1>
+</ng-template>
+<ng-template [ngIf]="kite==='yellowgreen'">
+    <h1 style="color: yellowgreen;">The color is yellowgreen.</h1>
+</ng-template>
+
+<div [ngSwitch]="smile">
+<h1 *ngSwitchCase="'red'" style="color:red;">Color</h1>
+<h1 *ngSwitchCase="'green'" style="color:green;">Color</h1>
+<h1 *ngSwitchCase="'yellow'" style="color:yellow;">Color</h1>
+<h1 *ngSwitchCase="'orange'" style="color:orange;">Color</h1>
+<h1 *ngSwitchCase="'grey'" style="color:grey;">Color</h1>
+<h1 *ngSwitchDefault style="color:black;">Unknown Color</h1>
+</div>
+
+
+<h1 *ngFor="let i of forever" style="color:skyblue;">{{i}}</h1>
+
+
+<h1 *ngFor="let i of foreverDetails" style="color:orangered;">{{i.group}} -- {{i.order}} -- {{i.name}}</h1>
+
+<!-- <h1>{{data}}</h1>
 <h1>{{dataprint()}}</h1>
 <h1>{{title=="first_blog_1"}}</h1>
 <h1>{{2-2/4}}</h1>
@@ -39,10 +72,3 @@
 <button (click)="proxy('pro')">Disable</button> -->
 
 
-    <h1 *ngIf="disable"; then ifelse else elseblock ></h1>
-    <ng-template #ifelse>
-        <h1>Condition No.1</h1>
-    </ng-template>
-    <ng-template #elseblock>
-        <h1>Condition No.2</h1>
-    </ng-template>
