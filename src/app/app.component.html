@@ -1,0 +1,48 @@
+<!-- <h1>Angular 12 {{title}}</h1>
+<h1>{{data}}</h1>
+<h1>{{dataprint()}}</h1>
+<h1>{{title=="first_blog_1"}}</h1>
+<h1>{{2-2/4}}</h1>
+<h1 class="{{title}}">{{title}}</h1>
+<app-login></app-login>
+<app-great></app-great>
+<app-sign-in></app-sign-in>
+<app-sign-in></app-sign-in>
+<button (click)="getNum(123,'hero')">Click</button>
+<br><br>
+<input type="text" #role (keyup)="getData(role.value)" placeholder="Keyup Value" />
+<br><br>
+<input type="text" #role1 (keydown)="getData(role1.value)" placeholder="Keydown Value" />
+<br><br>
+<input type="text" #role2 (blur)="getData(role2.value)" placeholder="Blur Value" />
+<br><br>
+<input type="text" #role3 (input)="getData(role3.value)" placeholder="Input Value" />
+<br><br>
+<h1 (mouseover)="getData('over')">MouseOver</h1>
+<br><br>
+<h1 (mouseleave)="getData('leave')">MouseLeave</h1>
+<br><br>
+<input type="text" #box placeholder="Enter Name" name="name" />
+<button (click)="getValue(box.value)">Click</button>
+<p>Name : {{displayValue}}</p>
+<button (click)="counter('minus')">--</button>
+<p>Count : {{count}}</p>
+<button (click)="counter('add')">++</button>
+<br /><br />
+<input type="text" #pro name="user-name" value={{name}} disabled={{disable}} />
+<br /><br />
+<button (click)="proxy(pro.value)">Enable</button>
+<br /><br />
+<button (click)="proxy_1(pro.value)">Disable</button>
+<br /><br />
+<input type="text"  name="user-name" [value]=name [disabled]=disable />
+<button (click)="proxy('pro')">Disable</button> -->
+
+
+    <h1 *ngIf="disable"; then ifelse else elseblock ></h1>
+    <ng-template #ifelse>
+        <h1>Condition No.1</h1>
+    </ng-template>
+    <ng-template #elseblock>
+        <h1>Condition No.2</h1>
+    </ng-template>
