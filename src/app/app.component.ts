@@ -22,7 +22,13 @@ export class AppComponent {
      {name:'3',order:'3',group:'three'},
      { name:'4',order:'4',group:'four'},
      { name:'5',order:'5',group:'five'},
-  ]
+  ];
+  okaythen = [
+    { name:'don',num:'20',group:['insta','fb','twitter']},
+    { name:'ken',num:'32',group:['insta','fb','twitter']},
+    { name:'ben',num:'21',group:['insta','fb','twitter']},
+    { name:'ten',num:'10',group:['insta','fb','twitter']},
+  ];
   data = "The University of Faisalabad";
   dataprint(){
     return "TUF";

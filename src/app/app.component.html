@@ -32,6 +32,15 @@
 
 <h1 *ngFor="let i of foreverDetails" style="color:orangered;">{{i.group}} -- {{i.order}} -- {{i.name}}</h1>
 
+
+<ul *ngFor="let i of okaythen">
+    <li>{{i.name}}</li>
+    <li>{{i.num}}</li>
+    <li>Social Accounts</li>
+    <ul *ngFor="let j of i.group">
+        <li>{{j}}</li>
+    </ul>
+</ul>
 <!-- <h1>{{data}}</h1>
 <h1>{{dataprint()}}</h1>
 <h1>{{title=="first_blog_1"}}</h1>
