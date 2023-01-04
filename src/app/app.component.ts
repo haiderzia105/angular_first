@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -6,7 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'first_blog';
+  title = 'Header';
+  list:any[]=[];
+  off = true;
+  userData:any = {};
   displayValue = '';
   count = 0;
   name = "Haider";
@@ -52,5 +56,22 @@ export class AppComponent {
   }
   proxy_1(dis:string){
     this.disable = true;
+  }
+  getForm(data:NgForm){
+  console.warn("data");
+  this.userData = data;
+  }
+  getdelete(){
+ this.off = !this.off;
+  }
+  addTask(item:string){
+    this.list.push({id:this.list.length,name:item});
+    console.warn(this.list);
+
+  }
+  removeTask(id:number){
+  this.list=this.list.filter(item=>item.id==id);
+    console.warn(this.list);
+
   }
 }

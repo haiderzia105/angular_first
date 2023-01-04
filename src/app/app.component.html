@@ -1,5 +1,6 @@
-<h1>Angular 12 {{title}}</h1>
-<h1 *ngIf="able; then ifBlock else elseBlock" ></h1>
+<app-header></app-header>
+<h1>Angular 12 -- {{title}}</h1>
+<!-- <h1 *ngIf="able; then ifBlock else elseBlock" ></h1>
 <ng-template #ifBlock>
     <h1>Condition No.1</h1>
 </ng-template>
@@ -40,7 +41,7 @@
     <ul *ngFor="let j of i.group">
         <li>{{j}}</li>
     </ul>
-</ul>
+</ul> -->
 <!-- <h1>{{data}}</h1>
 <h1>{{dataprint()}}</h1>
 <h1>{{title=="first_blog_1"}}</h1>
@@ -81,3 +82,184 @@
 <button (click)="proxy('pro')">Disable</button> -->
 
 
+
+<!-- <form #basicForm="ngForm" (ngSubmit) = "getForm(basicForm.value)">
+<input type="text" ngModel placeholder="name" name="name">
+<br /><br />
+<input type="text" ngModel placeholder="email" name="email">
+<br /><br />
+<input type="text" ngModel placeholder="password" name="password">
+<br /><br />
+<button>Register</button>
+</form>
+
+<ul>
+    <li>{{userData.name}}</li>
+    <li>{{userData.email}}</li>
+    <li>{{userData.password}}</li>
+</ul>
+
+<button (click)="getdelete()">On & Off</button>
+<h1 *ngIf="off">
+    Hide & Seek
+</h1> -->
+
+<!-- <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+	<ngb-panel title="Simple">
+		<ng-template ngbPanelContent>
+			Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+			officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf
+			moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim
+			keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher
+			vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't
+			heard of them accusamus labore sustainable VHS.
+		</ng-template>
+	</ngb-panel>
+	<ngb-panel>
+		<ng-template ngbPanelTitle>
+			<span>&#9733; <b>Fancy</b> title &#9733;</span>
+		</ng-template>
+		<ng-template ngbPanelContent>
+			Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+			officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf
+			moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim
+			keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher
+			vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't
+			heard of them accusamus labore sustainable VHS.
+		</ng-template>
+	</ngb-panel>
+	<ngb-panel title="Disabled" [disabled]="true">
+		<ng-template ngbPanelContent>
+			Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+			officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf
+			moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim
+			keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher
+			vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't
+			heard of them accusamus labore sustainable VHS.
+		</ng-template>
+	</ngb-panel>
+</ngb-accordion> -->
+
+<mat-slide-toggle>Toggle me!</mat-slide-toggle>
+<br /><br />
+<h3>Basic Buttons</h3>
+<div class="example-button-row">
+  <button mat-button>Basic</button>
+  <button mat-button color="primary" style="color: aqua;">Primary</button>
+  <button mat-button color="accent">Accent</button>
+  <button mat-button color="warn">Warn</button>
+  <button mat-button disabled>Disabled</button>
+  <a mat-button routerLink=".">Link</a>
+</div>
+
+<h3>Raised Buttons</h3>
+<div class="example-button-row">
+  <button mat-raised-button>Basic</button>
+  <button mat-raised-button [color]="'primary'">Primary</button>
+  <button mat-raised-button [color]="'accent'">Accent</button>
+  <button  color="warn">Warn</button>
+  <button mat-raised-button disabled>Disabled</button>
+  <a mat-raised-button routerLink=".">Link</a>
+</div>
+
+<h3>Stroked Buttons</h3>
+<div class="example-button-row">
+  <button mat-stroked-button>Basic</button>
+  <button mat-stroked-button color="primary">Primary</button>
+  <button mat-stroked-button color="accent">Accent</button>
+  <button mat-stroked-button color="warn">Warn</button>
+  <button mat-stroked-button disabled>Disabled</button>
+  <a mat-stroked-button routerLink=".">Link</a>
+</div>
+
+<h3>Flat Buttons</h3>
+<div class="example-button-row">
+  <button mat-flat-button>Basic</button>
+  <button mat-flat-button color="primary">Primary</button>
+  <button mat-flat-button color="accent">Accent</button>
+  <button mat-flat-button color="warn">Warn</button>
+  <button mat-flat-button disabled>Disabled</button>
+  <a mat-flat-button routerLink=".">Link</a>
+</div>
+
+<h3>Icon Buttons</h3>
+<div class="example-button-row">
+  <button mat-icon-button matTooltip="Basic" aria-label="Example icon-button with a heart icon">
+  </button>
+  <button mat-icon-button matTooltip="Primary" color="primary" aria-label="Example icon-button with a heart icon">
+  </button>
+  <button mat-icon-button matTooltip="Accent" color="accent" aria-label="Example icon-button with a heart icon">
+  </button>
+  <button mat-icon-button matTooltip="Warn" color="warn" aria-label="Example icon-button with a heart icon">
+  </button>
+  <div matTooltip="Disabled" class="example-disabled">
+    <button mat-icon-button disabled aria-label="Example icon-button with a heart icon">
+    </button>
+  </div>
+  <a mat-icon-button matTooltip="Lik" routerLink="." aria-label="Example icon-button with a heart icon">
+  </a>
+</div>
+
+<h3>Fab Buttons</h3>
+<div class="example-button-row">
+  <button mat-fab matTooltip="Primary" color="primary" aria-label="Example fab with a heart icon">
+  </button>
+  <button mat-fab matTooltip="Accent" color="accent" aria-label="Example fab with a heart icon">
+  </button>
+  <button mat-fab matTooltip="Warn" color="warn" aria-label="Example fab with a heart icon">
+  </button>
+  <div matTooltip="Disabled" class="example-disabled">
+    <button mat-fab disabled aria-label="Example fab with a heart icon">
+    </button>
+  </div>
+  <a mat-fab matTooltip="Link" routerLink="." aria-label="Example fab with a heart icon">
+  </a>
+</div>
+
+<h3>Mini Fab Buttons</h3>
+<div class="example-button-row">
+  <button mat-mini-fab matTooltip="Primary" color="primary" aria-label="Example mini fab with a heart icon">
+  </button>
+  <button mat-mini-fab matTooltip="Accent" color="accent" aria-label="Example mini fab with a heart icon">
+  </button>
+  <button mat-mini-fab matTooltip="Warn" color="warn" aria-label="Example mini fab with a heart icon">
+  </button>
+  <div matTooltip="Disabled" class="example-disabled">
+    <button mat-mini-fab disabled aria-label="Example mini fab with a heart icon">
+    </button>
+  </div>
+  <a mat-mini-fab matTooltip="Link" routerLink="." aria-label="Example mini fab with a heart icon">
+  </a>
+</div>
+
+<h3>Extended Fab</h3>
+<div class="example-button-row">
+  <button mat-fab extended color="primary">
+   
+    Primary
+  </button>
+  <button mat-fab extended color="accent">
+
+    Accent
+  </button>
+  <button mat-fab extended color="warn">
+   
+    Warn
+  </button>
+  <button mat-fab extended disabled>
+ 
+    Disabled
+  </button>
+  <a mat-fab extended routerLink=".">
+
+    Link
+  </a>
+</div>
+
+<input type="text" placeholder="Text" #tie>
+<br /><br />
+<button (click)="addTask(tie.value)">Click</button>
+
+<ul *ngFor="let item of list">
+    <li>{{item.name}} <button (click)="removeTask(item.id)">Remove</button></li>
+</ul>
