@@ -12,13 +12,19 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatSlideToggleModule } from '@angular/material/slide-toggle';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
+import { ChildComponent } from './child/child.component';
+import { ReuseItemComponent } from './reuse-item/reuse-item.component';
+import { UsdPkrPipe } from './pipes/usd-pkr.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     GreatComponent,
-    HeaderComponent
+    HeaderComponent,
+    ChildComponent,
+    ReuseItemComponent,
+    UsdPkrPipe
   ],
   imports: [
     BrowserModule,

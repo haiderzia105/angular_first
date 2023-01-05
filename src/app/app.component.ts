@@ -8,6 +8,17 @@ import { NgForm } from '@angular/forms';
 })
 export class AppComponent {
   title = 'Header';
+  funshow = "";
+  today = Date();
+  business = '';
+  goodV = "x";
+  nice = 10;
+  reuseArray=[
+    {name:"Haider",email:"haider.1@gmail.com"},
+    {name:"Ali",email:"ali.1@gmail.com"},
+    {name:"Kamran",email:"kamran.1@gmail.com"},
+    {name:"Zahid",email:"zahid.1@gmail.com"},
+  ]
   list:any[]=[];
   off = true;
   userData:any = {};
@@ -70,8 +81,23 @@ export class AppComponent {
 
   }
   removeTask(id:number){
-  this.list=this.list.filter(item=>item.id==id);
-    console.warn(this.list);
+  console.warn(id);
+  this.list=this.list.filter(item=>item.id!==id);
+  }
+  parentChild(){
+    this.nice = Math.floor(Math.random()*10);
+  }
+  
+  updateValue(good:string){
+    console.warn(good);
+    this.goodV=good;
+  }
+
+  testFun(karma:string | number) {
+
+    if(typeof karma === "number"){
+    console.warn(karma*8);
+    }
 
   }
 }

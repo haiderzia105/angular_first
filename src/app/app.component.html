@@ -1,5 +1,6 @@
 <app-header></app-header>
-<h1>Angular 12 -- {{title}}</h1>
+<h1>Angular 12</h1>
+<br /><br />
 <!-- <h1 *ngIf="able; then ifBlock else elseBlock" ></h1>
 <ng-template #ifBlock>
     <h1>Condition No.1</h1>
@@ -83,7 +84,7 @@
 
 
 
-<!-- <form #basicForm="ngForm" (ngSubmit) = "getForm(basicForm.value)">
+<form #basicForm="ngForm" (ngSubmit) = "getForm(basicForm.value)">
 <input type="text" ngModel placeholder="name" name="name">
 <br /><br />
 <input type="text" ngModel placeholder="email" name="email">
@@ -99,7 +100,7 @@
     <li>{{userData.password}}</li>
 </ul>
 
-<button (click)="getdelete()">On & Off</button>
+<!-- <button (click)="getdelete()">On & Off</button>
 <h1 *ngIf="off">
     Hide & Seek
 </h1> -->
@@ -140,7 +141,7 @@
 	</ngb-panel>
 </ngb-accordion> -->
 
-<mat-slide-toggle>Toggle me!</mat-slide-toggle>
+<!-- <mat-slide-toggle>Toggle me!</mat-slide-toggle>
 <br /><br />
 <h3>Basic Buttons</h3>
 <div class="example-button-row">
@@ -254,12 +255,41 @@
 
     Link
   </a>
-</div>
+</div> -->
 
-<input type="text" placeholder="Text" #tie>
+<!-- <input type="text" placeholder="Text" #tie>
 <br /><br />
 <button (click)="addTask(tie.value)">Click</button>
 
 <ul *ngFor="let item of list">
     <li>{{item.name}} <button (click)="removeTask(item.id)">Remove</button></li>
-</ul>
+</ul> -->
+
+<!-- <app-child [done] = "nice" ></app-child>
+<button (click)="parentChild()">Random</button> -->
+
+<!-- <ul *ngFor="let user of reuseArray">
+  <app-reuse-item [user] = "user"></app-reuse-item>
+</ul> -->
+
+<!-- <li>{{goodV}}</li>
+<app-child (updateValueEvent) = "updateValue($event)" ></app-child>
+<br /><br />
+<label for="print" >Enter text to see two-way binding. </label>
+<br />
+<input type="text" [(ngModel)] = 'business'>
+<br /><br />
+<h1>{{business}}</h1> -->
+
+<input type="number" placeholder="number" #allow>
+<button (click)="testFun(allow.value)">Enter</button>
+<br /><br />
+<h1>{{today | date : 'fullDate'}}</h1>
+
+<h1>{{title | uppercase}}</h1>
+<h1>{{title | slice : 2 : 4  |  uppercase}}</h1>
+<h1>{{reuseArray | json | uppercase}}</h1>
+<h1>{{2.3000 |number : '2.3'}}</h1>
+<h1>{{20 | currency : 'USD'}}</h1>
+
+<h1>{{226.67 | usdPkr : 15 }}</h1>
