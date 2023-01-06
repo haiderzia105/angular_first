@@ -15,6 +15,8 @@ import {MatIconModule} from '@angular/material/icon';
 import { ChildComponent } from './child/child.component';
 import { ReuseItemComponent } from './reuse-item/reuse-item.component';
 import { UsdPkrPipe } from './pipes/usd-pkr.pipe';
+import {ReactiveFormsModule} from '@angular/forms';
+import { GreenElDirective } from './green-el.directive';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { UsdPkrPipe } from './pipes/usd-pkr.pipe';
     HeaderComponent,
     ChildComponent,
     ReuseItemComponent,
-    UsdPkrPipe
+    UsdPkrPipe,
+    GreenElDirective
   ],
   imports: [
     BrowserModule,
@@ -34,7 +37,8 @@ import { UsdPkrPipe } from './pipes/usd-pkr.pipe';
     BrowserAnimationsModule,
     MatSlideToggleModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import {FormControl,FormGroup,Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,7 @@ import { NgForm } from '@angular/forms';
 })
 export class AppComponent {
   title = 'Header';
+  printFormData:any='';
   funshow = "";
   today = Date();
   business = '';
@@ -99,5 +101,28 @@ export class AppComponent {
     console.warn(karma*8);
     }
 
+  }
+  getFormData(item:any)
+  {
+  console.warn(item);
+  this.printFormData = item;
+  }
+
+  loginGroup = new FormGroup({
+  name1 : new FormControl('',[Validators.required, Validators.pattern('[a-zA-Z]+$')]),
+  password : new FormControl('',[Validators.required, Validators.minLength(5)]),
+  email: new FormControl('',[Validators.required, Validators.email]),
+  })
+  get name1()
+  {
+  return this.loginGroup.get('name1');
+  }
+  get password()
+  {
+  return this.loginGroup.get('password');
+  }
+  get email()
+  {
+  return this.loginGroup.get('email');
   }
 }

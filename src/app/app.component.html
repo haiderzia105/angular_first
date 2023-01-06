@@ -268,7 +268,7 @@
 <!-- <app-child [done] = "nice" ></app-child>
 <button (click)="parentChild()">Random</button> -->
 
-<!-- <ul *ngFor="let user of reuseArray">
+<!-- <ul *ngFor = "let user of reuseArray" >
   <app-reuse-item [user] = "user"></app-reuse-item>
 </ul> -->
 
@@ -281,7 +281,7 @@
 <br /><br />
 <h1>{{business}}</h1> -->
 
-<input type="number" placeholder="number" #allow>
+<!-- <input type="number" placeholder="number" #allow>
 <button (click)="testFun(allow.value)">Enter</button>
 <br /><br />
 <h1>{{today | date : 'fullDate'}}</h1>
@@ -291,5 +291,52 @@
 <h1>{{reuseArray | json | uppercase}}</h1>
 <h1>{{2.3000 |number : '2.3'}}</h1>
 <h1>{{20 | currency : 'USD'}}</h1>
+<h1>{{226.67 | usdPkr : 15 }}</h1> -->
 
-<h1>{{226.67 | usdPkr : 15 }}</h1>
+<!-- <form #loginForm = "ngForm" (ngSubmit)="getFormData(loginForm.value)" >
+<br /><br />
+<input type="text" placeholder="Email" name="email" ngModel>
+<br /><br />
+<input type="text" placeholder="password" name="password" ngModel>
+<br /><br />
+<button>Login</button>
+</form>
+<br /><br />
+<button (click)="getFormData(loginForm.value)">login-try</button>
+<br /><br />
+<ul>
+  <li>{{printFormData.email}}</li>
+  <li>{{printFormData.password}}</li>
+</ul> -->
+
+<form [formGroup] = "loginGroup" (ngSubmit) = "getFormData(loginGroup.value)">
+
+
+  <input type="text" placeholder="Name" formControlName="name1">
+  <br />
+  <span *ngIf="name1 && name1.invalid && name1.touched">The field is not valid</span>
+  <br /><br />
+  <input type="text" placeholder="Password" formControlName="password">
+  <br />
+  <span *ngIf="password && password.invalid && password.touched">The field is not valid</span>
+  <br /><br />
+  <input type="email" placeholder="Email" formControlName="email">
+  <br />
+  <span *ngIf="email && email.invalid && email.touched">The field is not valid</span>
+  <br /><br />
+  <button [disabled] = "loginGroup.invalid">Login</button>
+</form>
+
+<h1>How are you!</h1>
+<br /><br />
+<h1 appGreenEl>I am fine.</h1>
+<br /><br />
+<h1>How are you!</h1>
+<br /><br />
+<h1 appGreenEl>I am fine.</h1>
+<br /><br />
+<h1>How are you!</h1>
+<br /><br />
+<h1 appGreenEl>I am fine.</h1>
+<br /><br />
+
